@@ -15,3 +15,5 @@ ENTRYPOINT sh ts3server_minimal_runscript.sh
 
 # docker build -t ex01 .
 # docker container run --rm -p 9987:9987/udp -p 10011:10011 -p 30033:30033 ex01
+# loging with ip:9987
+# teamspeak client will ask for priviledge key, it's in the server log "token=..."
