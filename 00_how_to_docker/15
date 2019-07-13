@@ -1,1 +1,2 @@
-docker container run -d --name roach-warden -p 8081:80 --link spawning-pool:mysql phpmyadmin/phpmyadmin
+docker container run -d --name roach-warden -p 8081:80 -e PMA_HOST="spawning-pool" -e MYSQL_ROOT_PASSWORD=Kerrigan --link spawning-pool:mysql phpmyadmin/phpmyadmin
+# to log in username: root, password: Kerrigan
