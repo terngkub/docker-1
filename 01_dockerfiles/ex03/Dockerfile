@@ -24,5 +24,12 @@ EXPOSE 80 443 22
 
 ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && service ssh start && tail -f /dev/null
 
+# docker build -t ex03 .
 # docker container run -p 80:80 -p 443:443 -p 8023:22 --name gitlab ex03
+
+# access site
 # https://192.168.99.100
+
+# test ssh
+# 1. log in and create project
+# 2. git clone ssh://git@192.168.99.100:8022/root/project
